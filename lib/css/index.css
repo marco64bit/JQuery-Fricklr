@@ -1,0 +1,242 @@
+/*
+ * Marco Pretelli 21/10/2013
+ * 
+ * Programma di prova per Iamboo.srl
+ * 
+*/
+
+body{
+	background-color: rgb(236, 240, 241);
+	margin: 0px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+message{
+	text-align:center;
+}
+
+
+h1{
+	cursor:pointer;
+	color:#5a5a5a;
+	text-align:center;
+}
+
+p{
+	text-align:center;
+}
+
+#c{
+	width:100%;
+	height:20px;
+	border-bottom:2px solid black;
+	border-radius:100px;
+	margin-bottom:20px;
+}
+
+.image{
+	border: 4px solid #7A7A7A;
+	margin: 10px;
+	cursor: pointer;
+-webkit-filter:sepia(0%) drop-shadow(black 3px 3px 3px);
+
+transition-duration:1s;
+transition-timing-function:linear;
+/* Safari */
+
+-webkit-transition-duration:1s;
+-webkit-transition-property:-webkit-filter;
+-webkit-transition-duration:.15s;
+-webkit-transition-timing-function:ease-in;
+//-webkit-transition-delay:.01s;
+	//filter: drop-shadow(black 3px 3px 3px);
+		//-webkit-filter: drop-shadow(black 6px 6px 6px);
+	
+}
+.image:hover{
+-webkit-filter:sepia(100%) drop-shadow(black 6px 6px 6px);
+	//filter: sepia drop-shadow(black 3px 3px 3px);
+	//-webkit-filter: sepia(100%) drop-shadow(black 3px 3px 3px);
+	//-moz-filter: sepia(100%) drop-shadow(black 6px 6px 6px);
+}
+
+#images-container{
+	width: 100%;
+	display: block;
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 150px;
+	text-align: -webkit-center;
+	border-top: 5px solid rgb(156, 156, 156);
+	background:url('../../src/images/dark_gray_background.jpg');
+	background-color: rgb(201, 201, 201);
+}
+
+#load{
+	width:0%;
+	background-color:#e74c3c;
+	height:5px;
+}
+
+.box{
+	padding:5px;
+	background-color:rgb(108, 119, 105);
+	border: 1px solid black;
+}
+
+.superbox{
+	position:relative;
+	min-height:1px;
+	width:300px;
+	margin:3px;
+	display: inline-block;
+}
+
+.phone{
+	display:inline;
+	margin-left:20px;
+}
+
+a{
+	text-decoration:none;
+	color: #95B857;
+	font-size:24px;
+}
+a:hover{
+	color:#FFB800;
+}
+a:visited{
+	color:#C58E00;
+	text-decoration:underline;
+}
+
+#nascondibile{
+	display: inline;
+}
+#nascondi{
+	display:none;
+	border:3px solid gray;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+	color:yellowgreen;
+	font-size:24px;
+	cursor:pointer;
+	background-color:rgba(190, 230, 119, 0.59);
+	margin-left:10px;
+}
+
+footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	margin: 0px;
+	padding: 25px;
+	color: rgb(213, 213, 213);
+	font-size: 18px;
+	background-color: #0f1214;
+	border-top: 5px solid black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+
+.input{	
+	width: 100px;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/*		DIMENSIONE TABLET		*/
+@media (max-width: 991px) {
+}
+
+/*		DIMENSIONE TABLET/SMARTPHONE		*/
+@media (max-width: 767px) {
+
+footer{
+	position:relative;
+	padding-left:0px;
+	padding-right:0px;
+	margin:0px;
+}
+
+}
+
+/*		DIMENSIONE CELLULARI SMARTPHONE		*/
+@media (max-width: 479px) {
+	
+	.phone{
+		display:block;
+		text-align:center;
+		margin-left:20px;
+		margin-right:20px;
+		padding-top:5px;
+	}
+	
+.input{
+	width: 90%;
+	height: 34px;
+	padding: 6px 12px;
+	margin-top:10px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+	
+	#nascondi{
+		display:block;
+		margin-left:0px;
+		margin-right:0px;
+		margin-top: 50px;
+	}
+	
+	#nascondibile{
+		widht:100%;
+	}
+}
+
+/*		BARRA LATERALE DI SCORRIMENTO PERSONALIZZATA		*/
+
+::-webkit-scrollbar {
+   width: 5px;
+background: rgba(128, 128, 128, 0);
+}
+ 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(47, 117, 38, 1);
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    background: #3F3F3F;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.48);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
